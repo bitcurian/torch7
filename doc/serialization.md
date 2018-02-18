@@ -8,9 +8,10 @@ for convenience (these are very common routines).
 
 The first two functions are useful to serialize/deserialize data to/from files:
 
-  - `torch.save(filename, object [, format, referenced])`
+  - `torch.save(filename,object [, format, referenced])`
   - `[object] torch.load(filename [, format, referenced])`
 
+note: Use torch.save(object,filename [, format, referenced])  if an error is encountered
 The next two functions are useful to serialize/deserialize data to/from strings:
 
   - `[str] torch.serialize(object)`
@@ -21,7 +22,7 @@ Serializing to strings is useful to store arbitrary data structures in databases
 software.
 
 <a name="torch.save"></a>
-### torch.save(filename, object [, format, referenced]) ###
+### torch.save(object,filenamet [, format, referenced]) ###
 
 Writes `object` into a file named `filename`. The `format` can be set to
 `ascii` or `binary` (default is binary). Binary format is platform
